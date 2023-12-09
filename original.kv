@@ -1,0 +1,220 @@
+Screen:
+    MDBottomNavigation:
+        #panel_color: "#eeeaea"
+        selected_color_background: "orange"
+        text_color_active: "lightgrey"
+
+        MDBottomNavigationItem:
+            name: 'screen 1'
+            text: 'Оценки'
+            icon: 'view.png'
+            AnchorLayout:
+                id: screen1
+                anchor_x: 'center'
+                anchor_y: 'center'
+        MDBottomNavigationItem:
+            name: 'screen 2'
+            text: 'Задания на дом'
+            icon: 'house.png'
+            AnchorLayout:
+                id: screen2
+                anchor_x: 'center'
+                anchor_y: 'center'
+
+        MDBottomNavigationItem:
+            name: 'screen 3'
+            text: 'Новости'
+            icon: 'news.png'
+            Carousel:
+                MDFloatLayout:
+                    MDCard:
+                        size_hint: .9, .9
+                        pos_hint: {"center_y": 0.5, "center_x": 0.5}
+                        Image:
+                            source: "Add.PNG"
+
+                MDFloatLayout:
+                    MDCard:
+                        size_hint: .9, .9
+                        pos_hint: {"center_y": 0.5, "center_x": 0.5}
+                        Image:
+                            source: "Add2.PNG"
+
+
+
+                MDFloatLayout:
+                    MDCard:
+                        size_hint: .9, .9
+                        pos_hint: {"center_y": 0.5, "center_x": 0.5}
+                        Image:
+                            source: "Add3.PNG"
+
+        MDBottomNavigationItem:
+            name: 'screen 4'
+            text: 'Книги'
+            icon: 'book.png'
+            Carousel:
+                MDFloatLayout:
+                    MDCard:
+                        size_hint: .9, .9
+                        pos_hint: {"center_y": 0.5, "center_x": 0.5}
+                        Image:
+                            source: "Harper.png"
+
+
+                MDFloatLayout:
+                    MDCard:
+                        size_hint: .9, .9
+                        pos_hint: {"center_y": 0.5, "center_x": 0.5}
+                        Image:
+                            source: "Remark.jpg"
+
+
+                MDFloatLayout:
+                    MDCard:
+                        size_hint: .9, .9
+                        pos_hint: {"center_y": 0.5, "center_x": 0.5}
+                        Image:
+                            source: "Erik.jpg"
+
+
+
+        MDBottomNavigationItem:
+            name: 'screen 5'
+            text: 'Аккаунт'
+            icon: 'accaunt.png'
+            MDCard:
+                size_hint_x: None
+                width: root.width  # ширина равна ширине экрана минус 20px отступы
+                size_hint_y: 0.4
+                y: 380
+                padding: 25
+                spacing: 25
+                orientation: 'vertical'
+                md_bg_color: "orange"
+                AnchorLayout:
+                    anchor_y: 'top'
+                    MDLabel:
+                        id: change
+                        text: "Здравствуйте"
+                        font_size: 50
+                        size_hint_y: None
+                        height: self.texture_size[1]
+                        padding_y: 40
+                        halign: 'center'
+                        font_size: self.width * 0.06
+                AnchorLayout:
+                    anchor_y: 'bottom'
+                    MDLabel:
+                        pos_hint: {"center_x" :0.5}
+                        id: changeit
+                        text: "Ваш класс:"
+                        font_size: 50
+                        size_hint_y: None
+                        padding_y: 30
+                        halign: 'center'
+                        font_size: self.width * 0.06
+
+            MDIconButton:
+                icon: "acc.png"
+                disabled: True
+                x: 138
+                y: 325
+                icon_size: 100
+
+            MDCard:
+                id: cards
+                size_hint: None, None
+                size: 300, 60
+                y: 270
+                x: 40
+                padding: 25
+                spacing: 25
+                orientation: 'vertical'
+                md_bg_color: "orange"
+                opacity: 0
+                AnchorLayout:
+                    anchor_y: 'center'
+                    anchor_x: 'left'
+                    MDFlatButton:
+                        on_press: app.linking()
+                        id: change1
+                        text: "обратная связь               >"
+                        font_size: 22
+                        size_hint_y: None
+                        padding_y: 15
+
+            MDCard:
+                id: cards1
+                size_hint: None, None
+                size: 300, 60
+                y: 200
+                x: 40
+                padding: 25
+                spacing: 25
+                orientation: 'vertical'
+                md_bg_color: "orange"
+                opacity: 0
+                AnchorLayout:
+                    anchor_y: 'center'
+                    anchor_x: 'left'
+                    MDFlatButton:
+                        on_press: app.link()
+                        id: change2
+                        text: "Опросы                               >"
+                        font_size: 22
+                        size_hint_y: None
+                        padding_y: 15
+
+            MDCard:
+                id: cards2
+                size_hint: None, None
+                size: 300, 60
+                y: 130
+                x: 40
+                padding: 25
+                spacing: 25
+                orientation: 'vertical'
+                md_bg_color: "orange"
+                opacity: 0
+                AnchorLayout:
+                    anchor_y: 'center'
+                    anchor_x: 'left'
+                    MDFlatButton:
+                        id: change3
+                        text: "изменить пароль           >"
+                        font_size: 22
+                        size_hint_y: None
+                        padding_y: 15
+
+            MDCard:
+                id: cards3
+                size_hint: None, None
+                size: 300, 60
+                y: 60
+                x: 40
+                padding: 25
+                spacing: 25
+                orientation: 'vertical'
+                md_bg_color: "orange"
+                opacity: 0
+                AnchorLayout:
+                    anchor_y: 'center'
+                    anchor_x: 'left'
+                    MDFlatButton:
+                        on_press: app.quit()
+                        id: change3
+                        text: "Выйти                                  >"
+                        font_size: 22
+                        size_hint_y: None
+                        padding_y: 15
+                        y: 150
+                        x: 37
+
+            MDRoundFlatButton:
+                id: log_btn
+                text: "ВОЙТИ"
+                font_size: 12
+                pos_hint: {"center_x": 0.5, "center_y": 0.4}
+                on_press: app.click()
+                disabled: False
