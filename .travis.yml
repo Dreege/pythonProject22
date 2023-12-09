@@ -29,5 +29,5 @@ install:
   - ls -la
   - ls bin/ -l
   - gem install dpl --pre
-  - dpl releases --token $Sehriyo2024 --file "bin/sehriyoapp-0.1-armeabi-v7a-debug.apk" --tag_name "v.0.1"
+  - dpl releases --token $Sehriyo --file "bin/sehriyoapp-0.1-armeabi-v7a-debug.apk" --tag_name "v.0.1"
   - echo "TODO 2"
