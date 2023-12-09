@@ -87,47 +87,39 @@ Screen:
                 size_hint_x: None
                 width: root.width  # ширина равна ширине экрана минус 20px отступы
                 size_hint_y: 0.4
-                y: 380
-                padding: 25
-                spacing: 25
+                y: 410
                 orientation: 'vertical'
                 md_bg_color: "orange"
-                AnchorLayout:
-                    anchor_y: 'top'
-                    MDLabel:
-                        id: change
-                        text: "Здравствуйте"
-                        font_size: 50
-                        size_hint_y: None
-                        height: self.texture_size[1]
-                        padding_y: 40
-                        halign: 'center'
-                        font_size: self.width * 0.06
-                AnchorLayout:
-                    anchor_y: 'bottom'
-                    MDLabel:
-                        pos_hint: {"center_x" :0.5}
-                        id: changeit
-                        text: "Ваш класс:"
-                        font_size: 50
-                        size_hint_y: None
-                        padding_y: 30
-                        halign: 'center'
-                        font_size: self.width * 0.06
 
+            MDLabel:
+                id: change
+                text: "Здравствуйте"
+                font_size: 40
+                size_hint_y: None
+                height: self.texture_size[1]
+                halign: 'center'
+                pos_hint: {"center_x": 0.5, "center_y": 0.93}
+                font_size: self.width * 0.04
+            MDLabel:
+                pos_hint: {"center_x": 0.5, "center_y": 0.83}
+                id: changeit
+                text: "Ваш класс:"
+                size_hint_y: None
+                padding_y: 20
+                halign: 'center'
+                font_size: self.width * 0.04
             MDIconButton:
+                y:20
                 icon: "acc.png"
                 disabled: True
-                x: 138
-                y: 325
-                icon_size: 100
+                pos_hint: {"center_x": 0.5, "center_y": 0.63}
+                icon_size: 180
 
             MDCard:
                 id: cards
                 size_hint: None, None
                 size: 300, 60
-                y: 270
-                x: 40
+                pos_hint: {"center_x": 0.5, "center_y": 0.45}
                 padding: 25
                 spacing: 25
                 orientation: 'vertical'
@@ -148,8 +140,7 @@ Screen:
                 id: cards1
                 size_hint: None, None
                 size: 300, 60
-                y: 200
-                x: 40
+                pos_hint: {"center_x": 0.5, "center_y": 0.35}
                 padding: 25
                 spacing: 25
                 orientation: 'vertical'
@@ -170,8 +161,7 @@ Screen:
                 id: cards2
                 size_hint: None, None
                 size: 300, 60
-                y: 130
-                x: 40
+                pos_hint: {"center_x": 0.5, "center_y": 0.25}
                 padding: 25
                 spacing: 25
                 orientation: 'vertical'
@@ -191,8 +181,7 @@ Screen:
                 id: cards3
                 size_hint: None, None
                 size: 300, 60
-                y: 60
-                x: 40
+                pos_hint: {"center_x": 0.5, "center_y": 0.15}
                 padding: 25
                 spacing: 25
                 orientation: 'vertical'

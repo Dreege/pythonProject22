@@ -6,7 +6,7 @@ from kivymd.app import MDApp
 from kivy.core.window import Window
 import webbrowser
 
-Window.size = (400, 600)
+Window.size = (1080 , 2340)
 
 
 class Test(MDApp):
@@ -67,7 +67,7 @@ class Test(MDApp):
                      "Литература")
             self.table = MDDataTable(
                 pos_hint={"center_y": 0.5, "center_x": 0.5},
-                size_hint=(0.9, 0.85),
+                size_hint=(0.4, 0.85),
                 use_pagination=True,
                 rows_num=7,
                 column_data=[
@@ -94,7 +94,7 @@ class Test(MDApp):
 
             self.tab = MDDataTable(
                 pos_hint={"center_y": 0.5, "center_x": 0.5},
-                size_hint=(0.95, 0.95),
+                size_hint=(0.6, 0.95),
                 use_pagination=True,
                 rows_num=7,
                 column_data=[
