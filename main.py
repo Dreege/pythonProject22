@@ -67,9 +67,9 @@ class Test(MDApp):
                      "Литература")
             self.table = MDDataTable(
                 pos_hint={"center_y": 0.5, "center_x": 0.5},
-                size_hint=(0.4, 0.85),
+                size_hint=(0.85, 0.8),
                 use_pagination=True,
-                rows_num=7,
+                rows_num=8,
                 column_data=[
                     ("Предметы:", dp(45)),
                     (username, dp(45)),
@@ -94,9 +94,9 @@ class Test(MDApp):
 
             self.tab = MDDataTable(
                 pos_hint={"center_y": 0.5, "center_x": 0.5},
-                size_hint=(0.6, 0.95),
+                size_hint=(0.85, 0.8),
                 use_pagination=True,
-                rows_num=7,
+                rows_num=8,
                 column_data=[
                     ("", dp(45)),
                     ("", dp(30)),

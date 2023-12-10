@@ -31,14 +31,15 @@ Screen:
                         size_hint: .9, .9
                         pos_hint: {"center_y": 0.5, "center_x": 0.5}
                         Image:
-                            source: "Add.PNG"
+                            source: "News.jpg"
 
                 MDFloatLayout:
                     MDCard:
                         size_hint: .9, .9
                         pos_hint: {"center_y": 0.5, "center_x": 0.5}
                         Image:
-                            source: "Add2.PNG"
+                            source: "News2.jpg"
+                            size: 200, 200
 
 
 
@@ -47,7 +48,8 @@ Screen:
                         size_hint: .9, .9
                         pos_hint: {"center_y": 0.5, "center_x": 0.5}
                         Image:
-                            source: "Add3.PNG"
+                            source: "News3.jpg"
+                            size: 200, 200
 
         MDBottomNavigationItem:
             name: 'screen 4'
@@ -87,7 +89,8 @@ Screen:
                 size_hint_x: None
                 width: root.width  # ширина равна ширине экрана минус 20px отступы
                 size_hint_y: 0.4
-                y: 410
+                halign: 'top'
+                pos_hint: {"center_x": 0.5, "center_y": 0.9}
                 orientation: 'vertical'
                 md_bg_color: "orange"
 
@@ -98,10 +101,10 @@ Screen:
                 size_hint_y: None
                 height: self.texture_size[1]
                 halign: 'center'
-                pos_hint: {"center_x": 0.5, "center_y": 0.93}
+                pos_hint: {"center_x": 0.5, "center_y": 0.87}
                 font_size: self.width * 0.04
             MDLabel:
-                pos_hint: {"center_x": 0.5, "center_y": 0.83}
+                pos_hint: {"center_x": 0.5, "center_y": 0.8}
                 id: changeit
                 text: "Ваш класс:"
                 size_hint_y: None
@@ -112,98 +115,106 @@ Screen:
                 y:20
                 icon: "acc.png"
                 disabled: True
-                pos_hint: {"center_x": 0.5, "center_y": 0.63}
-                icon_size: 180
+                pos_hint: {"center_x": 0.5, "center_y": 0.7}
+                icon_size: 200
 
-            MDCard:
-                id: cards
-                size_hint: None, None
-                size: 300, 60
-                pos_hint: {"center_x": 0.5, "center_y": 0.45}
-                padding: 25
-                spacing: 25
+            BoxLayout:
+                spacing: 70
                 orientation: 'vertical'
-                md_bg_color: "orange"
-                opacity: 0
-                AnchorLayout:
-                    anchor_y: 'center'
-                    anchor_x: 'left'
-                    MDFlatButton:
-                        on_press: app.linking()
-                        id: change1
-                        text: "обратная связь               >"
-                        font_size: 22
-                        size_hint_y: None
-                        padding_y: 15
+                pos_hint: {'center_x': 0.5, 'center_y': 0.75}
+                MDCard:
+                    id: cards
+                    size_hint: None, None
+                    size: 800, 120
+                    padding: 25
+                    pos_hint: {'center_x': 0.5, 'center_y': 0.95}
+                    orientation: 'vertical'
+                    md_bg_color: "orange"
+                    opacity: 0
+                    halign: 'center'
+                    AnchorLayout:
+                        anchor_y: 'center'
+                        anchor_x: 'left'
+                        MDFlatButton:
+                            on_press: app.linking()
+                            id: change1
+                            text: "обратная связь                                   >"
+                            font_size: 40
+                            size_hint_y: None
+                            halign: 'center'
+                            padding_y: 15
 
-            MDCard:
-                id: cards1
-                size_hint: None, None
-                size: 300, 60
-                pos_hint: {"center_x": 0.5, "center_y": 0.35}
-                padding: 25
-                spacing: 25
-                orientation: 'vertical'
-                md_bg_color: "orange"
-                opacity: 0
-                AnchorLayout:
-                    anchor_y: 'center'
-                    anchor_x: 'left'
-                    MDFlatButton:
-                        on_press: app.link()
-                        id: change2
-                        text: "Опросы                               >"
-                        font_size: 22
-                        size_hint_y: None
-                        padding_y: 15
+                MDCard:
+                    id: cards1
+                    size_hint: None, None
+                    size:800, 120
+                    padding: 25
+                    pos_hint: {'center_x': 0.5, 'center_y': 0.85}
+                    orientation: 'vertical'
+                    md_bg_color: "orange"
+                    opacity: 0
+                    halign: 'center'
+                    AnchorLayout:
+                        anchor_y: 'center'
+                        anchor_x: 'left'
+                        MDFlatButton:
+                            on_press: app.link()
+                            id: change2
+                            halign: 'center'
+                            text: "Опросы                                                 >"
+                            font_size: 40
+                            size_hint_y: None
+                            padding_y: 15
 
-            MDCard:
-                id: cards2
-                size_hint: None, None
-                size: 300, 60
-                pos_hint: {"center_x": 0.5, "center_y": 0.25}
-                padding: 25
-                spacing: 25
-                orientation: 'vertical'
-                md_bg_color: "orange"
-                opacity: 0
-                AnchorLayout:
-                    anchor_y: 'center'
-                    anchor_x: 'left'
-                    MDFlatButton:
-                        id: change3
-                        text: "изменить пароль           >"
-                        font_size: 22
-                        size_hint_y: None
-                        padding_y: 15
+                MDCard:
+                    id: cards2
+                    size_hint: None, None
+                    size:800, 120
+                    padding: 25
+                    pos_hint: {'center_x': 0.5, 'center_y': 0.75}
+                    orientation: 'vertical'
+                    md_bg_color: "orange"
+                    opacity: 0
+                    halign: 'center'
+                    AnchorLayout:
+                        anchor_y: 'center'
+                        anchor_x: 'left'
+                        MDFlatButton:
+                            halign: 'center'
+                            id: change3
+                            text: "изменить пароль                               >"
+                            font_size: 40
+                            size_hint_y: None
+                            padding_y: 15
 
-            MDCard:
-                id: cards3
-                size_hint: None, None
-                size: 300, 60
-                pos_hint: {"center_x": 0.5, "center_y": 0.15}
-                padding: 25
-                spacing: 25
-                orientation: 'vertical'
-                md_bg_color: "orange"
-                opacity: 0
-                AnchorLayout:
-                    anchor_y: 'center'
-                    anchor_x: 'left'
-                    MDFlatButton:
-                        on_press: app.quit()
-                        id: change3
-                        text: "Выйти                                  >"
-                        font_size: 22
-                        size_hint_y: None
-                        padding_y: 15
-                        y: 150
-                        x: 37
+                MDCard:
+                    id: cards3
+                    size_hint: None, None
+                    size:800, 120
+                    padding: 25
+                    pos_hint: {'center_x': 0.5, 'center_y': 0.65}
+                    orientation: 'vertical'
+                    md_bg_color: "orange"
+                    opacity: 0
+                    halign: 'center'
+                    AnchorLayout:
+                        anchor_y: 'center'
+                        anchor_x: 'left'
+                        MDFlatButton:
+                            on_press: app.quit()
+                            id: change3
+                            halign: 'center'
+                            text: "Выйти                                                    >"
+                            font_size: 40
+                            size_hint_y: None
+                            padding_y: 15
+                            y: 150
+                            x: 37
 
             MDRoundFlatButton:
                 id: log_btn
                 text: "ВОЙТИ"
-                font_size: 12
+                font_size: 30
                 pos_hint: {"center_x": 0.5, "center_y": 0.4}
                 on_press: app.click()
                 disabled: False
